@@ -10,29 +10,6 @@ export interface LessonProps {
     type: 'live' | 'class';
 }
 
-export interface GetLessonsQueryResponse {
-    lessons: {
-        id: string;
-        title: string;
-        slug: string;
-        availableAt: Date;
-        lessonType: 'live' | 'class';
-    }[];
-}
-
 export interface VideoProps {
     lessonSlug: string;
-}
-
-export interface GetLessonBySlugResponse {
-    lesson: {
-        title: string;
-        videoId: string;
-        description: string;
-        teacher: {
-            name: string;
-            bio: string;
-            avatarURL: string;
-        };
-    };
 }
